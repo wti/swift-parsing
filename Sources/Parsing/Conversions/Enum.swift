@@ -1,3 +1,4 @@
+#if canImport(CasePaths)
 import CasePaths
 
 extension Conversion {
@@ -61,3 +62,4 @@ extension CasePath: Conversion {
     return value
   }
 }
+#endif

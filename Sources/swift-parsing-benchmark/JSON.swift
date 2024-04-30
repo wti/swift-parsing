@@ -7,7 +7,7 @@ import Parsing
 /// It is mostly implemented according to the [spec](https://www.json.org/json-en.html) (we take a
 /// shortcut and use `Double.parser()`, which behaves accordingly).
 let jsonSuite = BenchmarkSuite(name: "JSON") { suite in
-  #if swift(>=5.8)
+  #if swift(>=5.8) && canImport(CasePaths)
     struct JSONValue: ParserPrinter {
       enum Output: Equatable {
         case array([Self])
